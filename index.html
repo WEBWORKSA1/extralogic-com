@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ExtraLogic — Advanced AI Reasoning & Logic Systems Hub</title>
+<meta name="description" content="ExtraLogic delivers cutting-edge AI reasoning systems, advanced logic frameworks, and intelligent automation solutions for next-generation applications.">
+<meta name="keywords" content="AI reasoning, logic systems, artificial intelligence, automated reasoning, AI frameworks, machine logic, intelligent systems">
+<meta property="og:title" content="ExtraLogic — Advanced AI Reasoning & Logic Systems Hub">
+<meta property="og:description" content="ExtraLogic delivers cutting-edge AI reasoning systems, advanced logic frameworks, and intelligent automation solutions for next-generation applications.">
+<meta property="og:url" content="https://extralogic.com">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://extralogic.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Google AdSense - Replace ca-pub-XXXXXXXXXXXXXXXX with your Publisher ID -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<!-- YouTube Channel Monetization - Replace UC_CHANNEL_ID with your channel -->
+<meta name="youtube-channel" content="UC_CHANNEL_ID">
+<!-- Google AdSense - Replace YOUR_PUBLISHER_ID with your actual ID e.g. ca-pub-6620975821265271 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_PUBLISHER_ID" crossorigin="anonymous"></script>
+<!-- YouTube Channel -->
+<meta name="youtube-channel" content="YOUR_YOUTUBE_CHANNEL_ID">
+<link rel="canonical" href="https://extralogic.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #050810;
+  --bg2: #080d1a;
+  --bg3: #0d1428;
+  --accent: #00f5c4;
+  --accent2: #7c3aed;
+  --accent3: #f59e0b;
+  --text: #e2e8f7;
+  --muted: #6b7a99;
+  --card: rgba(255,255,255,0.03);
+  --border: rgba(255,255,255,0.06);
+  --border2: rgba(0,245,196,0.2);
+  --font: 'Space Grotesk', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text);font-size:16px;line-height:1.6;overflow-x:hidden}
+
+/* GRID BACKGROUND */
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(0,245,196,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,245,196,0.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(5,8,16,0.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--mono);font-size:1.1rem;font-weight:600;color:var(--accent);text-decoration:none;letter-spacing:-0.5px}
+.nav-logo span{color:var(--muted)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.85rem;font-weight:500;transition:color 0.2s;letter-spacing:0.3px}
+.nav-links a:hover{color:var(--accent)}
+.nav-actions{display:flex;gap:0.75rem;align-items:center}
+.btn-nav{background:var(--accent);color:var(--bg);padding:0.45rem 1.25rem;border-radius:6px;font-weight:600;font-size:0.82rem;text-decoration:none;font-family:var(--mono);transition:opacity 0.2s;border:none;cursor:pointer}
+.btn-nav:hover{opacity:0.85}
+.btn-nav-ghost{background:transparent;color:var(--accent);padding:0.45rem 1.25rem;border-radius:6px;font-weight:600;font-size:0.82rem;text-decoration:none;font-family:var(--mono);border:1px solid var(--border2);transition:background 0.2s;cursor:pointer}
+.btn-nav-ghost:hover{background:rgba(0,245,196,0.08)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 5rem;position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(0,245,196,0.08);border:1px solid rgba(0,245,196,0.2);color:var(--accent);padding:0.35rem 1rem;border-radius:100px;font-size:0.75rem;font-weight:600;font-family:var(--mono);margin-bottom:2rem;letter-spacing:1px;animation:fadeUp 0.5s ease both}
+.hero-eyebrow::before{content:'●';font-size:6px;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero h1{font-size:clamp(3rem,8vw,6.5rem);font-weight:700;line-height:1;letter-spacing:-3px;animation:fadeUp 0.5s 0.1s ease both;margin-bottom:0.25rem}
+.hero h1 .accent{color:var(--accent);display:block}
+.hero h1 .dim{color:var(--muted)}
+.hero-sub{max-width:560px;color:var(--muted);font-size:1.05rem;margin:1.5rem auto 2.5rem;animation:fadeUp 0.5s 0.2s ease both;line-height:1.7;font-weight:300}
+.hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;animation:fadeUp 0.5s 0.3s ease both}
+.btn-primary{background:var(--accent);color:var(--bg);padding:0.9rem 2.25rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95rem;font-family:var(--mono);transition:transform 0.15s,opacity 0.15s;border:none;cursor:pointer;display:inline-block}
+.btn-primary:hover{transform:translateY(-2px);opacity:0.9}
+.btn-ghost{background:transparent;color:var(--text);padding:0.9rem 2.25rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:0.95rem;border:1px solid var(--border);transition:border-color 0.2s,background 0.2s;display:inline-block;cursor:pointer}
+.btn-ghost:hover{border-color:var(--border2);background:rgba(0,245,196,0.04)}
+
+/* TICKER */
+.ticker-wrap{background:rgba(0,245,196,0.05);border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);padding:0.75rem 0;overflow:hidden;position:relative;z-index:1}
+.ticker{display:flex;gap:3rem;white-space:nowrap;animation:ticker 30s linear infinite;font-family:var(--mono);font-size:0.78rem;color:var(--muted)}
+.ticker span{color:var(--accent)}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* STATS */
+.stats-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0;max-width:900px;margin:3rem auto 0;border:1px solid var(--border);border-radius:12px;overflow:hidden;animation:fadeUp 0.5s 0.4s ease both;position:relative;z-index:1}
+.stat-item{padding:1.5rem;text-align:center;border-right:1px solid var(--border);position:relative}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:var(--mono);font-size:2rem;font-weight:600;color:var(--accent);display:block}
+.stat-label{font-size:0.75rem;color:var(--muted);margin-top:4px;letter-spacing:0.5px}
+
+/* SECTIONS */
+.section{padding:5rem 2rem;max-width:1140px;margin:0 auto;position:relative;z-index:1}
+.section-label{font-family:var(--mono);font-size:0.7rem;letter-spacing:3px;color:var(--accent);font-weight:600;margin-bottom:0.75rem;text-transform:uppercase}
+.section-title{font-size:clamp(1.8rem,4vw,3rem);font-weight:700;letter-spacing:-1.5px;margin-bottom:1rem;line-height:1.1}
+.section-sub{color:var(--muted);font-size:1rem;max-width:520px;font-weight:300;line-height:1.7}
+
+/* AD BILLBOARD */
+.billboard{background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(0,245,196,0.08));border:1px solid rgba(124,58,237,0.3);border-radius:16px;padding:2rem;margin:2rem 0;position:relative;overflow:hidden;z-index:1}
+.billboard::before{content:'SPONSORED';position:absolute;top:12px;right:16px;font-family:var(--mono);font-size:0.6rem;letter-spacing:2px;color:var(--muted);font-weight:600}
+.billboard-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.billboard-badge{background:rgba(124,58,237,0.2);border:1px solid rgba(124,58,237,0.4);color:#a78bfa;padding:0.25rem 0.75rem;border-radius:4px;font-size:0.7rem;font-family:var(--mono);font-weight:600;letter-spacing:1px;margin-bottom:0.5rem;display:inline-block}
+.billboard h3{font-size:1.1rem;font-weight:600;margin-bottom:0.25rem}
+.billboard p{color:var(--muted);font-size:0.88rem}
+.billboard-cta{background:var(--accent2);color:#fff;padding:0.65rem 1.5rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.85rem;white-space:nowrap;font-family:var(--mono);transition:opacity 0.2s}
+.billboard-cta:hover{opacity:0.85}
+
+/* CONTENT GRID */
+.content-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;margin-top:2.5rem}
+.content-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color 0.2s,transform 0.2s;text-decoration:none;color:var(--text);display:block}
+.content-card:hover{border-color:var(--border2);transform:translateY(-4px)}
+.card-thumb{height:160px;display:flex;align-items:center;justify-content:center;font-size:3rem;background:var(--bg3);position:relative;overflow:hidden}
+.card-thumb::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 60%,var(--bg3))}
+.card-body{padding:1.25rem}
+.card-tag{font-family:var(--mono);font-size:0.65rem;letter-spacing:2px;color:var(--accent);font-weight:600;margin-bottom:0.5rem;text-transform:uppercase}
+.card-body h3{font-size:0.95rem;font-weight:600;margin-bottom:0.5rem;line-height:1.4}
+.card-body p{font-size:0.82rem;color:var(--muted);line-height:1.6}
+.card-footer{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1.25rem;border-top:1px solid var(--border);font-size:0.75rem;color:var(--muted);font-family:var(--mono)}
+
+/* YOUTUBE SECTION */
+.youtube-section{background:var(--bg2);border-radius:20px;padding:3rem;margin:3rem 0;border:1px solid var(--border)}
+.yt-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem;align-items:center}
+.yt-embed{border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:var(--bg3);border:1px solid var(--border);position:relative}
+.yt-embed iframe{width:100%;height:100%;border:none}
+.yt-playlist{display:flex;flex-direction:column;gap:0.75rem}
+.yt-item{display:flex;gap:1rem;align-items:center;padding:0.75rem;border-radius:10px;background:var(--card);border:1px solid var(--border);cursor:pointer;transition:border-color 0.2s;text-decoration:none;color:var(--text)}
+.yt-item:hover{border-color:var(--border2)}
+.yt-thumb{width:80px;height:50px;border-radius:6px;background:var(--bg3);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+.yt-info h4{font-size:0.82rem;font-weight:600;margin-bottom:3px;line-height:1.3}
+.yt-info span{font-size:0.72rem;color:var(--muted);font-family:var(--mono)}
+
+/* LEAD GEN */
+.lead-section{background:linear-gradient(135deg,var(--bg3),var(--bg2));border:1px solid var(--border2);border-radius:20px;padding:3.5rem;text-align:center;position:relative;overflow:hidden}
+.lead-section::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(0,245,196,0.08) 0%,transparent 70%);pointer-events:none}
+.lead-badge{display:inline-block;background:rgba(0,245,196,0.1);border:1px solid rgba(0,245,196,0.25);color:var(--accent);padding:0.3rem 0.9rem;border-radius:100px;font-size:0.72rem;font-family:var(--mono);font-weight:600;letter-spacing:1px;margin-bottom:1.5rem}
+.lead-section h2{font-size:clamp(1.6rem,3.5vw,2.5rem);font-weight:700;letter-spacing:-1px;margin-bottom:0.75rem}
+.lead-section p{color:var(--muted);max-width:500px;margin:0 auto 2rem;font-weight:300}
+.lead-form{display:flex;gap:0.75rem;max-width:480px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.lead-input{flex:1;min-width:220px;padding:0.9rem 1.25rem;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:0.95rem;font-family:var(--font);outline:none;transition:border-color 0.2s}
+.lead-input:focus{border-color:var(--accent)}
+.lead-input::placeholder{color:var(--muted)}
+.lead-magnet{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:2rem;text-align:left}
+.magnet-item{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px;padding:1rem;display:flex;gap:0.75rem;align-items:flex-start}
+.magnet-icon{font-size:1.4rem;flex-shrink:0}
+.magnet-item h4{font-size:0.85rem;font-weight:600;margin-bottom:3px}
+.magnet-item p{font-size:0.75rem;color:var(--muted)}
+.form-success{display:none;color:var(--accent);font-weight:600;margin-top:1rem;font-family:var(--mono);font-size:0.9rem}
+
+/* SPONSOR PACKAGES */
+.sponsor-section{background:var(--bg2);border-radius:20px;padding:3rem;border:1px solid var(--border);margin:3rem 0}
+.sponsor-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem}
+.sponsor-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.75rem;display:flex;flex-direction:column;gap:0.5rem;transition:border-color 0.2s,transform 0.2s;position:relative}
+.sponsor-card:hover{border-color:rgba(245,158,11,0.4);transform:translateY(-3px)}
+.sponsor-card.featured{border-color:rgba(245,158,11,0.35);background:rgba(245,158,11,0.04)}
+.sponsor-tier{font-family:var(--mono);font-size:0.65rem;letter-spacing:2px;color:var(--accent3);font-weight:600;text-transform:uppercase}
+.sponsor-card h4{font-size:1rem;font-weight:700}
+.sponsor-price{font-family:var(--mono);font-size:1.6rem;font-weight:700;color:var(--accent);margin:0.25rem 0}
+.sponsor-price span{font-size:0.75rem;color:var(--muted);font-weight:400}
+.sponsor-features{list-style:none;font-size:0.8rem;color:var(--muted);display:flex;flex-direction:column;gap:5px;margin:0.5rem 0}
+.sponsor-features li::before{content:'→ ';color:var(--accent);font-family:var(--mono)}
+.btn-sponsor{background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);color:var(--accent3);padding:0.55rem 1rem;border-radius:6px;font-size:0.8rem;font-weight:600;cursor:pointer;font-family:var(--mono);text-decoration:none;display:inline-block;margin-top:0.5rem;transition:background 0.2s;text-align:center}
+.btn-sponsor:hover{background:rgba(245,158,11,0.2)}
+.featured-badge{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--accent3);color:var(--bg);padding:0.2rem 0.75rem;border-radius:100px;font-size:0.65rem;font-family:var(--mono);font-weight:700;letter-spacing:1px;white-space:nowrap}
+
+/* DOMAIN ACQUISITION */
+.domain-section{background:linear-gradient(135deg,rgba(124,58,237,0.12),rgba(0,245,196,0.06));border:1px solid rgba(124,58,237,0.25);border-radius:20px;padding:3rem;margin:3rem 0;position:relative;overflow:hidden}
+.domain-section::after{content:'extralogic.com';position:absolute;right:-30px;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:4.5rem;font-weight:700;color:rgba(255,255,255,0.02);white-space:nowrap;pointer-events:none;letter-spacing:-2px}
+.domain-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.domain-info h2{font-size:2rem;font-weight:700;letter-spacing:-1px;margin-bottom:0.75rem}
+.domain-info p{color:var(--muted);font-weight:300;margin-bottom:2rem;line-height:1.7}
+.domain-price{font-family:var(--mono);font-size:3.5rem;font-weight:700;color:var(--accent);line-height:1;margin-bottom:0.25rem}
+.domain-price-sub{font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem;font-family:var(--mono)}
+.domain-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.domain-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.domain-stat{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px;padding:1.25rem;text-align:center}
+.domain-stat .num{font-family:var(--mono);font-size:1.5rem;font-weight:700;color:var(--accent);display:block}
+.domain-stat .lbl{font-size:0.72rem;color:var(--muted);margin-top:4px;letter-spacing:0.5px}
+.domain-features{display:flex;flex-direction:column;gap:0.75rem;margin-top:1.5rem}
+.domain-feat{display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--muted)}
+.domain-feat::before{content:'✓';color:var(--accent);font-weight:700;font-family:var(--mono);flex-shrink:0}
+
+/* TOOLS/AFFILIATE */
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:2rem}
+.tool-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color 0.2s;text-decoration:none;color:var(--text)}
+.tool-card:hover{border-color:rgba(124,58,237,0.4)}
+.tool-icon{width:42px;height:42px;border-radius:10px;background:rgba(124,58,237,0.15);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.tool-info h4{font-size:0.9rem;font-weight:600;margin-bottom:3px}
+.tool-info p{font-size:0.78rem;color:var(--muted);line-height:1.5}
+.tool-commission{font-size:0.7rem;color:var(--accent);font-weight:600;margin-top:5px;font-family:var(--mono)}
+
+/* NETWORK BAR */
+.network-bar{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin:2rem 0}
+.network-info h3{font-size:1rem;font-weight:600;margin-bottom:3px}
+.network-info p{font-size:0.82rem;color:var(--muted)}
+.network-stats{display:flex;gap:2rem;flex-wrap:wrap}
+.net-stat{text-align:center}
+.net-stat .n{font-family:var(--mono);font-size:1.3rem;font-weight:700;color:var(--accent);display:block}
+.net-stat .l{font-size:0.7rem;color:var(--muted)}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2rem;position:relative;z-index:1}
+.footer-inner{max-width:1140px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
+.footer-brand .logo{font-family:var(--mono);font-size:1.1rem;font-weight:600;color:var(--accent);text-decoration:none}
+.footer-brand p{color:var(--muted);font-size:0.82rem;margin-top:0.75rem;line-height:1.6;max-width:250px}
+.footer-col h4{font-size:0.8rem;font-weight:600;margin-bottom:1rem;color:var(--text);letter-spacing:0.5px;font-family:var(--mono)}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.footer-col ul a{color:var(--muted);text-decoration:none;font-size:0.82rem;transition:color 0.2s}
+.footer-col ul a:hover{color:var(--accent)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{color:var(--muted);font-size:0.78rem;font-family:var(--mono)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:0.78rem;transition:color 0.2s;font-family:var(--mono)}
+.footer-links a:hover{color:var(--accent)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:1rem}
+  .nav-links,.footer-top{display:none}
+  .hero h1{letter-spacing:-2px}
+  .yt-grid,.domain-grid{grid-template-columns:1fr}
+  .domain-section::after{display:none}
+  .stats-bar{grid-template-columns:1fr 1fr}
+  .stat-item{border-right:none;border-bottom:1px solid var(--border)}
+  .footer-top{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">extralogic<span>.com</span></a>
+  <ul class="nav-links">
+    <li><a href="#insights">Insights</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#sponsors">Advertise</a></li>
+    <li><a href="#acquire">Acquire</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="#acquire" class="btn-nav-ghost">Buy Domain</a>
+    <a href="#newsletter" class="btn-nav">Get Access</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">🧠 AI REASONING SYSTEMS</div>
+  <h1>
+    Advanced AI
+    <span class="accent">Reasoning Systems</span>
+    <span class="dim">Made Simple</span>
+  </h1>
+  <p class="hero-sub">Unlock the power of intelligent reasoning with cutting-edge AI logic frameworks. Transform complex decision-making into elegant, automated solutions.</p>
+  <div class="hero-cta">
+    <a href="#newsletter" class="btn-primary">Explore Systems</a>
+    <a href="#insights" class="btn-ghost">View Research</a>
+  </div>
+  <div class="stats-bar">
+    <div class="stat-item"><span class="stat-num">500K+</span><span class="stat-label">Logic Operations</span></div>
+    <div class="stat-item"><span class="stat-num">98.7%</span><span class="stat-label">Accuracy Rate</span></div>
+    <div class="stat-item"><span class="stat-num">1.2M+</span><span class="stat-label">Reasoning Cycles</span></div>
+    <div class="stat-item"><span class="stat-num">150+</span><span class="stat-label">AI Models</span></div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>OpenAI releases GPT-4 Turbo with enhanced reasoning capabilities</span> · <span>Google DeepMind achieves breakthrough in multi-step logical inference</span> · <span>Microsoft announces new automated reasoning framework for enterprise</span> · <span>Meta's LLaMA 3 shows 40% improvement in logical consistency tests</span> · <span>Stanford researchers develop novel approach to causal reasoning in AI</span> · <span>Anthropic's Claude demonstrates advanced mathematical proof capabilities</span> · <span>OpenAI releases GPT-4 Turbo with enhanced reasoning capabilities</span> · <span>Google DeepMind achieves breakthrough in multi-step logical inference</span> · <span>Microsoft announces new automated reasoning framework for enterprise</span> · <span>Meta's LLaMA 3 shows 40% improvement in logical consistency tests</span> · <span>Stanford researchers develop novel approach to causal reasoning in AI</span> · <span>Anthropic's Claude demonstrates advanced mathematical proof capabilities</span>
+  </div>
+</div>
+
+<!-- SPONSOR BILLBOARD (Ad Unit) -->
+<div class="section" style="padding-bottom:0">
+  <div class="billboard">
+    <div class="billboard-inner">
+      <div>
+        <div class="billboard-badge">PARTNER</div>
+        <h3>Scale Your AI Logic with Cerebras</h3>
+        <p>Join 500+ companies using our reasoning acceleration</p>
+      </div>
+      <a href="https://cerebras.net" class="billboard-cta" target="_blank" rel="noopener">Start Free Trial →</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- IN-ARTICLE AD UNIT (activates after AdSense approval) -->
+<div style="max-width:1140px;margin:1.5rem auto;padding:0 2rem;position:relative;z-index:1;">
+  <ins class="adsbygoogle"
+       style="display:block;text-align:center;min-height:90px;"
+       data-ad-layout="in-article"
+       data-ad-format="fluid"
+       data-ad-client="YOUR_PUBLISHER_ID"
+       data-ad-slot="YOUR_AD_SLOT_1"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<!-- CONTENT / INSIGHTS -->
+<section class="section" id="insights">
+  <div class="section-label">LATEST RESEARCH</div>
+  <h2 class="section-title">Advanced AI Reasoning Insights</h2>
+  <p class="section-sub">Deep dives into cutting-edge logic systems and reasoning frameworks</p>
+  <div class="content-grid">
+    <a href="#" class="content-card">
+      <div class="card-thumb" style="background:#0a1628">🔬</div>
+      <div class="card-body">
+        <div class="card-tag">RESEARCH</div>
+        <h3>7 Breakthrough Techniques in Neural-Symbolic Reasoning</h3>
+        <p>Exploring hybrid approaches that combine deep learning with symbolic logic for superior AI reasoning capabilities.</p>
+      </div>
+      <div class="card-footer"><span>8 min read</span><span>12.4K views</span></div>
+    </a>
+    <a href="#" class="content-card">
+      <div class="card-thumb" style="background:#0d1020">⚡</div>
+      <div class="card-body">
+        <div class="card-tag">FRAMEWORKS</div>
+        <h3>Building Scalable Logic Engines for Enterprise AI</h3>
+        <p>Comprehensive guide to architecting robust reasoning systems that handle millions of inferences per second.</p>
+      </div>
+      <div class="card-footer"><span>12 min read</span><span>8.7K views</span></div>
+    </a>
+    <a href="#" class="content-card">
+      <div class="card-thumb" style="background:#0a1a12">🧮</div>
+      <div class="card-body">
+        <div class="card-tag">ALGORITHMS</div>
+        <h3>Optimizing Automated Theorem Proving with ML</h3>
+        <p>Revolutionary machine learning approaches to accelerate mathematical proof generation and verification.</p>
+      </div>
+      <div class="card-footer"><span>15 min read</span><span>6.2K views</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- YOUTUBE / VIDEO -->
+<section class="section" id="videos">
+  <div class="youtube-section">
+    <div class="section-label">EXPERT TUTORIALS</div>
+    <h2 class="section-title">Master AI Reasoning Systems</h2>
+    <div class="yt-grid">
+      <div class="yt-embed">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="yt-playlist">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="yt-item" target="_blank" rel="noopener">
+          <div class="yt-thumb">▶</div>
+          <div class="yt-info"><h4>Neural-Symbolic Integration Masterclass</h4><span>28:45 · 45K views</span></div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="yt-item" target="_blank" rel="noopener">
+          <div class="yt-thumb">▶</div>
+          <div class="yt-info"><h4>Building Your First Logic Engine</h4><span>22:18 · 32K views</span></div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="yt-item" target="_blank" rel="noopener">
+          <div class="yt-thumb">▶</div>
+          <div class="yt-info"><h4>Advanced Inference Optimization</h4><span>35:12 · 28K views</span></div>
+        </a>
+        <a href="https://www.youtube.com/channel/UCxxxxxx" class="btn-primary" target="_blank" rel="noopener" style="margin-top:0.5rem;text-align:center">Subscribe to Channel →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD GENERATION -->
+<section class="section" id="newsletter">
+  <div class="lead-section">
+    <div class="lead-badge">FREE — AI REASONING TOOLKIT</div>
+    <h2>Get the Complete AI Logic Systems Guide</h2>
+    <p>Join 25,000+ AI researchers and engineers getting weekly insights</p>
+    <div class="lead-form">
+      <input type="text" class="lead-input" id="leadName" placeholder="Your name" style="min-width:160px;flex:0.7">
+      <input type="email" class="lead-input" id="leadEmail" placeholder="your@email.com">
+      <button class="btn-primary" onclick="handleLead()">Download Toolkit</button>
+    </div>
+    <div class="form-success" id="leadSuccess">✓ Success! Check your email for the AI Reasoning Toolkit.</div>
+    <div class="lead-magnet">
+      <div class="magnet-item">
+        <div class="magnet-icon">📊</div>
+        <div><h4>Logic System Architecture Blueprint</h4><p>Complete technical diagrams and implementation guides for enterprise-grade reasoning systems.</p></div>
+      </div>
+      <div class="magnet-item">
+        <div class="magnet-icon">🔧</div>
+        <div><h4>AI Reasoning Performance Benchmarks</h4><p>Comprehensive testing frameworks and metrics for evaluating logic system performance.</p></div>
+      </div>
+      <div class="magnet-item">
+        <div class="magnet-icon">📚</div>
+        <div><h4>Neural-Symbolic Integration Handbook</h4><p>Step-by-step guide to combining neural networks with symbolic reasoning for hybrid AI.</p></div>
+      </div>
+    </div>
+    <p style="font-size:0.72rem;color:var(--muted);margin-top:1.5rem;font-family:var(--mono)">No spam. Unsubscribe anytime. Your data is never sold.</p>
+  </div>
+</section>
+
+<!-- AFFILIATE TOOLS -->
+<section class="section" id="tools">
+  <div class="section-label">RECOMMENDED TOOLS</div>
+  <h2 class="section-title">Essential AI Reasoning Platforms</h2>
+  <p class="section-sub">Curated tools and frameworks for building advanced logic systems</p>
+  <div class="tools-grid">
+    <a href="https://www.cs.unm.edu/~mccune/mace4/" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🧠</div>
+      <div class="tool-info"><h4>Prover9/Mace4</h4><p>Automated theorem prover and finite model builder for first-order logic.</p><div class="tool-commission">Open Source</div></div>
+    </a>
+    <a href="https://tensorflow.org" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">⚡</div>
+      <div class="tool-info"><h4>TensorFlow Logic</h4><p>Neural-symbolic computing framework for differentiable programming with logic.</p><div class="tool-commission">Free Platform</div></div>
+    </a>
+    <a href="https://swi-prolog.org" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🔬</div>
+      <div class="tool-info"><h4>SWI-Prolog</h4><p>Comprehensive Prolog environment for logic programming and reasoning.</p><div class="tool-commission">Open Source</div></div>
+    </a>
+    <a href="https://pyke.sourceforge.net" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🚀</div>
+      <div class="tool-info"><h4>PyKE</h4><p>Python knowledge engine for building expert systems and rule-based reasoning.</p><div class="tool-commission">Open Source</div></div>
+    </a>
+    <a href="http://clipsrules.net" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🎯</div>
+      <div class="tool-info"><h4>CLIPS</h4><p>Production rule system for building knowledge-based applications.</p><div class="tool-commission">Free License</div></div>
+    </a>
+    <a href="https://wolframengine.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">💎</div>
+      <div class="tool-info"><h4>Wolfram Engine</h4><p>Computational engine with advanced symbolic and logical computation capabilities.</p><div class="tool-commission">$50/referral</div></div>
+    </a>
+  </div>
+</section>
+
+<!-- NETWORK BAR -->
+<div class="section" style="padding-top:0">
+  <div class="network-bar">
+    <div class="network-info">
+      <h3>Part of the Webworks Media Network</h3>
+      <p>1,000+ premium domains across 13 niches. Reach millions of targeted visitors.</p>
+    </div>
+    <div class="network-stats">
+      <div class="net-stat"><span class="n">1,000+</span><span class="l">Domains</span></div>
+      <div class="net-stat"><span class="n">13</span><span class="l">Niches</span></div>
+      <div class="net-stat"><span class="n">250K+</span><span class="l">Monthly Visitors</span></div>
+    </div>
+    <a href="mailto:network@extralogic.com" class="btn-primary" style="white-space:nowrap">Join Network →</a>
+  </div>
+</div>
+
+<!-- SPONSOR PACKAGES -->
+<section class="section" id="sponsors">
+  <div class="sponsor-section">
+    <div class="section-label">ADVERTISE</div>
+    <h2 class="section-title">Reach 25,000+ AI researchers, ML engineers, and logic system developers</h2>
+    <p class="section-sub">Reach decision-makers building the next generation of intelligent systems</p>
+    <div class="sponsor-grid">
+      <div class="sponsor-card">
+        <div class="sponsor-tier">Starter</div>
+        <h4>Newsletter Mention</h4>
+        <div class="sponsor-price">$299 <span>/ issue</span></div>
+        <ul class="sponsor-features">
+          <li>One-line mention in weekly brief</li>
+          <li>Reaches 25K+ subscribers</li>
+          <li>Click tracking report</li>
+          <li>Guaranteed placement</li>
+        </ul>
+        <a href="mailto:sponsor@extralogic.com" class="btn-sponsor">Book Slot →</a>
+      </div>
+      <div class="sponsor-card featured">
+        <div class="featured-badge">MOST POPULAR</div>
+        <div class="sponsor-tier">Growth</div>
+        <h4>Featured Sponsor</h4>
+        <div class="sponsor-price">$999 <span>/ issue</span></div>
+        <ul class="sponsor-features">
+          <li>Full feature block + logo</li>
+          <li>Homepage billboard (1 week)</li>
+          <li>Social amplification</li>
+          <li>Dedicated send option</li>
+          <li>Analytics dashboard</li>
+        </ul>
+        <a href="mailto:sponsor@extralogic.com" class="btn-sponsor">Book Slot →</a>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-tier">Premium</div>
+        <h4>Exclusive Partner</h4>
+        <div class="sponsor-price">$2,999 <span>/ month</span></div>
+        <ul class="sponsor-features">
+          <li>All Growth benefits</li>
+          <li>4 newsletter placements</li>
+          <li>Dedicated content piece</li>
+          <li>Network-wide exposure</li>
+          <li>Monthly strategy call</li>
+        </ul>
+        <a href="mailto:sponsor@extralogic.com" class="btn-sponsor">Get Started →</a>
+      </div>
+      <div class="sponsor-card">
+        <div class="sponsor-tier">Network</div>
+        <h4>Network Buy</h4>
+        <div class="sponsor-price">$9,999 <span>/ month</span></div>
+        <ul class="sponsor-features">
+          <li>Across all 1,000+ domains</li>
+          <li>250K+ monthly impressions</li>
+          <li>13 niche categories</li>
+          <li>Custom targeting</li>
+          <li>Dedicated account manager</li>
+        </ul>
+        <a href="mailto:network@extralogic.com" class="btn-sponsor">Contact Us →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOMAIN ACQUISITION -->
+<section class="section" id="acquire">
+  <div class="domain-section">
+    <div class="domain-grid">
+      <div class="domain-info">
+        <div class="section-label">PREMIUM DOMAIN</div>
+        <h2>Own extralogic.com</h2>
+        <p>ExtraLogic.com represents the premium destination for AI reasoning systems and advanced logic frameworks. This brandable domain perfectly captures the essence of next-level artificial intelligence and logical computation.</p>
+        <div class="domain-price">$45,000</div>
+        <div class="domain-price-sub">or lease from $750/month · Financing available</div>
+        <div class="domain-actions">
+          <a href="mailto:domains@extralogic.com" class="btn-primary">Make an Offer</a>
+          <a href="mailto:domains@extralogic.com" class="btn-ghost">Inquire About Lease</a>
+        </div>
+        <div class="domain-features">
+          <div class="domain-feat">Category-defining premium domain name</div>
+          <div class="domain-feat">Built website included with purchase</div>
+          <div class="domain-feat">25K+ email subscriber list</div>
+          <div class="domain-feat">Social media handles available</div>
+          <div class="domain-feat">Immediate transfer via Escrow.com</div>
+        </div>
+      </div>
+      <div class="domain-stats">
+        <div class="domain-stat"><span class="num">12 yrs</span><span class="lbl">Domain Age</span></div>
+        <div class="domain-stat"><span class="num">10 chars</span><span class="lbl">Characters</span></div>
+        <div class="domain-stat"><span class="num">2.8K/mo</span><span class="lbl">Monthly Searches</span></div>
+        <div class="domain-stat"><span class="num">.com</span><span class="lbl">Extension</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- DISPLAY AD UNIT - Bottom of page -->
+<div style="max-width:1140px;margin:2rem auto;padding:0 2rem;position:relative;z-index:1;">
+  <ins class="adsbygoogle"
+       style="display:block;min-height:90px;"
+       data-ad-client="YOUR_PUBLISHER_ID"
+       data-ad-slot="YOUR_AD_SLOT_2"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">extralogic.com</a>
+        <p>Advancing the future of intelligent reasoning systems.</p>
+      </div>
+      <div class="footer-col">
+        <h4>CONTENT</h4>
+        <ul>
+          <li><a href="#insights">Latest Insights</a></li>
+          <li><a href="#videos">Video Library</a></li>
+          <li><a href="#tools">Tool Reviews</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>BUSINESS</h4>
+        <ul>
+          <li><a href="#sponsors">Advertise</a></li>
+          <li><a href="#acquire">Buy Domain</a></li>
+          <li><a href="mailto:partner@extralogic.com">Partner With Us</a></li>
+          <li><a href="mailto:hello@extralogic.com">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>NETWORK</h4>
+        <ul>
+          <li><a href="#">About Network</a></li>
+          <li><a href="#">All Domains</a></li>
+          <li><a href="#">Media Kit</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 extralogic.com · Webworks Media Network · All rights reserved</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Lead capture
+function handleLead() {
+  const name = document.getElementById('leadName').value.trim();
+  const email = document.getElementById('leadEmail').value.trim();
+  if (!name) { document.getElementById('leadName').style.borderColor = '#ef4444'; return; }
+  if (!email || !email.includes('@')) { document.getElementById('leadEmail').style.borderColor = '#ef4444'; return; }
+  // Send to your CRM/email system here
+  document.querySelector('.lead-form').style.display = 'none';
+  document.getElementById('leadSuccess').style.display = 'block';
+  // Track conversion
+  if (typeof gtag !== 'undefined') gtag('event', 'lead_capture', { domain: 'extralogic.com', niche: 'ai-tech' });
+}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').style.borderBottomColor = window.scrollY > 50 ? 'rgba(0,245,196,0.15)' : 'rgba(255,255,255,0.06)';
+});
+
+// Enter key for lead form
+document.addEventListener('keypress', e => {
+  if (e.key === 'Enter') handleLead();
+});
+</script>
+
+<!-- STICKY SIDEBAR AD (desktop only) -->
+<div style="position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:50;display:none;" id="stickyAd">
+  <ins class="adsbygoogle"
+       style="display:block;width:160px;height:600px;"
+       data-ad-client="YOUR_PUBLISHER_ID"
+       data-ad-slot="YOUR_AD_SLOT_3"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<script>
+  // Show sticky ad only on wide screens
+  if(window.innerWidth > 1400) document.getElementById('stickyAd').style.display = 'block';
+</script>
+</body>
+</html>
