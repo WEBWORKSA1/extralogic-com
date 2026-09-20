@@ -1,0 +1,23 @@
+<!--{"title":"Careers & Talent Network — Puzzle Designers, Writers, Creators | ExtraLogic","desc":"Join the ExtraLogic talent network. We hire freelance puzzle designers, educators, writers, video editors, developers and community moderators worldwide.","out":"careers.html","nav":"","priority":"0.7"}-->
+<section class="page-hero"><div class="container"><div class="crumbs"><a href="{{R}}index.html">Home</a> / Careers</div>
+<h1>Build the world's smartest playground</h1><p class="lead">We're a remote-first team, and we're hiring freelance and part-time talent who love logic, teaching and making things. Paid per project, credited on the work, flexible hours.</p></div></section>
+<section><div class="container"><h2>Open roles</h2><div class="grid g3 mt">
+  <div class="card"><span class="tag">Freelance · Remote</span><h3 class="mt">Puzzle Designer</h3><p>Create original logic grids, liar puzzles, sequences and contest sets. Paid per accepted puzzle.</p><a class="btn btn-ghost btn-sm" href="#apply" data-role="Puzzle Designer">Apply</a></div>
+  <div class="card"><span class="tag">Freelance · Remote</span><h3 class="mt">Education Writer</h3><p>Write clear, SEO-friendly lessons on logic, critical thinking, math and reasoning.</p><a class="btn btn-ghost btn-sm" href="#apply" data-role="Education Writer">Apply</a></div>
+  <div class="card"><span class="tag">Part-time · Remote</span><h3 class="mt">YouTube Video Editor</h3><p>Edit animated puzzle explainers and Shorts. Motion graphics are a plus.</p><a class="btn btn-ghost btn-sm" href="#apply" data-role="Video Editor">Apply</a></div>
+  <div class="card"><span class="tag">Contract · Remote</span><h3 class="mt">Front-end / Game Developer</h3><p>Build new browser puzzle games in vanilla JS or TypeScript. Accessibility-minded.</p><a class="btn btn-ghost btn-sm" href="#apply" data-role="Game Developer">Apply</a></div>
+  <div class="card"><span class="tag">Commission · Remote</span><h3 class="mt">Partnerships &amp; Sales</h3><p>Sell team events, school licenses and sponsorships. Generous commission.</p><a class="btn btn-ghost btn-sm" href="#apply" data-role="Partnerships & Sales">Apply</a></div>
+  <div class="card"><span class="tag">Volunteer → Paid</span><h3 class="mt">Community Moderator</h3><p>Run Discord, contest help desks and puzzle testing. Top moderators move to paid roles.</p><a class="btn btn-ghost btn-sm" href="#apply" data-role="Community Moderator">Apply</a></div>
+</div></div></section>
+<section class="section-alt" id="apply"><div class="container"><div class="leadgen">
+  <div><h2>Apply or join the talent network</h2><ul class="ticks"><li>We review every application</li><li>Shortlisted candidates get a small paid test task</li><li>No fit right now? You stay in our talent network for future projects</li></ul><p class="small muted">ExtraLogic is an equal-opportunity collaborator. We welcome applicants from every background and country.</p></div>
+  <form data-form="Job application" data-success="Application received! We'll be in touch if there's a match.">
+    <div class="row"><div><label for="j-name">Full name*</label><input id="j-name" name="name" required></div><div><label for="j-email">Email*</label><input id="j-email" type="email" name="email" required></div></div>
+    <div class="row"><div><label for="j-role">Role*</label><select id="j-role" name="role" required><option>Puzzle Designer</option><option>Education Writer</option><option>Video Editor</option><option>Game Developer</option><option>Partnerships &amp; Sales</option><option>Community Moderator</option><option>Other / talent network</option></select></div><div><label for="j-loc">Location / time zone</label><input id="j-loc" name="location"></div></div>
+    <label for="j-port">Portfolio / LinkedIn / GitHub URL*</label><input id="j-port" name="portfolio" type="url" required placeholder="https://">
+    <label for="j-rate">Expected rate (optional)</label><input id="j-rate" name="rate" placeholder="e.g. $30/hr or per piece">
+    <label for="j-why">Why you, in 3 sentences*</label><textarea id="j-why" name="message" required></textarea>
+    <button class="btn btn-primary btn-lg" type="submit" style="width:100%">Submit application</button>
+  </form>
+</div></div></section>
+<script>document.addEventListener("click",function(e){var a=e.target.closest("[data-role]");if(!a)return;var s=document.getElementById("j-role");if(s)s.value=a.getAttribute("data-role");});</script>
