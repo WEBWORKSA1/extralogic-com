@@ -1,0 +1,54 @@
+<!--{"title":"Free Reasoning Test (IQ-Style) — 20 Questions, Instant Score | ExtraLogic","desc":"Take the free ExtraLogic Reasoning Test: 20 timed IQ-style questions across numerical, verbal, pattern and deductive logic. Instant score and a full skills breakdown.","out":"reasoning-test.html","scripts":["iqtest.js"],"nav":"test","priority":"0.95"}-->
+<section class="page-hero"><div class="container"><div class="crumbs"><a href="{{R}}index.html">Home</a> / Reasoning Test</div>
+<h1>Free Reasoning Test</h1><p class="lead">20 questions · 15 minutes · 4 skill areas. Get your ExtraLogic Reasoning Score straight away, then unlock your full breakdown for free.</p></div></section>
+<section style="padding-top:32px"><div class="container" id="reasoning-test">
+  <div class="t-intro leadgen">
+    <div>
+      <h2>Before you start</h2>
+      <ul class="ticks"><li>Find a quiet spot. You have 15 minutes in total.</li><li>Answer every question. There's no penalty for guessing.</li><li>You can't go back, so trust your first reasoning.</li><li>No calculator needed. Pen and paper is fine.</li></ul>
+      <button class="btn btn-primary btn-lg" data-start>Start the test →</button>
+      <p class="form-note">This is a practice reasoning assessment for learning and fun. It is not a clinical IQ test.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card"><span class="ico">🔢</span><h3>Numerical</h3><p>Sequences, percentages, rates.</p></div>
+      <div class="card"><span class="ico">🔤</span><h3>Verbal</h3><p>Analogies, odd-one-out, anagrams.</p></div>
+      <div class="card"><span class="ico">🔷</span><h3>Pattern</h3><p>Matrices, series, spatial.</p></div>
+      <div class="card"><span class="ico">⚖️</span><h3>Deductive</h3><p>Syllogisms, ordering, calendars.</p></div>
+    </div>
+  </div>
+  <div class="t-run game-board q-card" style="display:none">
+    <div class="game-bar"><span class="small muted">Time left</span><span class="timer">15:00</span></div>
+    <div class="qbar"><i style="width:0"></i></div><div class="q"></div><div class="options"></div>
+  </div>
+  <div class="t-result" style="display:none">
+    <div class="leadgen">
+      <div class="center">
+        <span class="eyebrow">Your ExtraLogic Reasoning Score</span>
+        <div class="result-big" data-score>—</div>
+        <h3 data-band></h3><p class="muted" data-correct></p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><button class="btn btn-dark" data-share>Share my score</button><button class="btn btn-ghost" data-retake>Retake</button></div>
+        <p class="form-note">Score scale 70–150 with 100 = average reasoning performance. Indicative only.</p>
+      </div>
+      <div class="t-gate">
+        <h3>🔓 Unlock your free full report</h3>
+        <ul class="ticks"><li>Score for each of the 4 skill areas</li><li>Every answer reviewed with the correct answer</li><li>A personalised practice plan</li></ul>
+        <form data-form="Reasoning test lead" data-success="Unlocked! Your full report is below, and we've saved your result.">
+          <div class="row"><div><label for="t-name">First name*</label><input id="t-name" name="name" required></div><div><label for="t-email">Email*</label><input id="t-email" type="email" name="email" required></div></div>
+          <label for="t-why">Why are you testing?</label>
+          <select id="t-why" name="purpose"><option>Just for fun</option><option>Preparing for a job aptitude test</option><option>Student / exam prep</option><option>Screening candidates for my company</option><option>Teacher / using with a class</option></select>
+          <input type="hidden" name="test_result" value="">
+          <label class="check"><input type="checkbox" name="newsletter" value="yes" checked> Send me the Daily Logic Drop (free, unsubscribe anytime)</label>
+          <button class="btn btn-primary btn-lg mt" type="submit" style="width:100%">Unlock my full report</button>
+        </form>
+        <p class="form-note"><a href="#" data-unlock-anyway>Skip, just show the breakdown</a></p>
+      </div>
+    </div>
+    <div class="card t-report mt" style="display:none"></div>
+    <div class="card mt"><h3>Hiring? Use this test with your candidates.</h3><p>We offer branded, proctored reasoning assessments with results dashboards for teams.</p><a class="btn btn-primary" href="{{R}}business.html#demo">Request a demo</a></div>
+  </div>
+</div></section>
+<section class="section-alt"><div class="container" style="max-width:820px"><h2>About this test</h2>
+<details><summary>How is the score calculated?</summary><p>Each correct answer adds to a base score, with a small bonus for fast, accurate finishes. The result is mapped to a 70–150 scale where 100 is average performance. It is a practice indicator, not a standardised IQ.</p></details>
+<details><summary>Is my data private?</summary><p>Answers are scored in your browser. If you choose to unlock the report, we store your name, email and score only to send you your results and, if you opted in, the newsletter. See our <a href="{{R}}privacy.html">Privacy Policy</a>.</p></details>
+<details><summary>How can I improve my score?</summary><p>Practise daily: <a href="{{R}}number-sequences.html">Number Sequences</a> for numerical reasoning, <a href="{{R}}knights-and-knaves.html">Logic Challenges</a> for deduction and <a href="{{R}}sudoku.html">Sudoku</a> for pattern reasoning.</p></details>
+</div></section>
