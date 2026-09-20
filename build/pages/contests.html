@@ -1,0 +1,36 @@
+<!--{"title":"Logic Puzzle Contests with Prizes — Monthly Championship | ExtraLogic","desc":"Enter the free monthly ExtraLogic Logic Championship. Solve 10 timed puzzles, climb the leaderboard and win cash prizes and Pro memberships. Student, Open and Team divisions.","out":"contests.html","nav":"contests","priority":"0.9"}-->
+<section class="page-hero"><div class="container"><div class="crumbs"><a href="{{R}}index.html">Home</a> / Contests</div>
+<h1>The Monthly Logic Championship</h1><p class="lead">10 puzzles. 60 minutes. One leaderboard. Free to enter, with real prizes funded by sponsors and supporters.</p>
+<div class="hero-cta"><a class="btn btn-primary btn-lg" href="#register">Register free</a><a class="btn btn-ghost btn-lg" href="{{R}}leaderboard.html">View leaderboard</a></div></div></section>
+<section><div class="container grid g2" style="align-items:start">
+  <div class="card"><h2>Next contest</h2><p class="lead mb0" id="next-contest">—</p><p class="muted">Contest window opens 00:00 UTC on the first Saturday of the month and stays open 48 hours. You get one 60-minute attempt.</p>
+  <div class="grid g4 center mt" id="countdown"><div><b class="result-big" style="font-size:2rem" data-cd="d">0</b><div class="small muted">days</div></div><div><b class="result-big" style="font-size:2rem" data-cd="h">0</b><div class="small muted">hours</div></div><div><b class="result-big" style="font-size:2rem" data-cd="m">0</b><div class="small muted">min</div></div><div><b class="result-big" style="font-size:2rem" data-cd="s">0</b><div class="small muted">sec</div></div></div></div>
+  <div class="card"><h2>Prizes</h2><div data-fund></div><table class="mt"><tr><th>Place</th><th>Open</th><th>Student</th></tr><tr><td>🥇</td><td>$500 + 1-yr Pro</td><td>$150 + 1-yr Pro</td></tr><tr><td>🥈</td><td>$250 + 1-yr Pro</td><td>$75 + 1-yr Pro</td></tr><tr><td>🥉</td><td>$100 + 1-yr Pro</td><td>$50 + 1-yr Pro</td></tr><tr><td>Top 25</td><td colspan="2">Hall of Fame + badge</td></tr></table>
+  <p class="small muted">Prize amounts are confirmed before each contest opens and depend on sponsor and supporter funding.</p></div>
+</div></section>
+<section class="section-alt"><div class="container grid g3">
+  <div class="card"><span class="ico">🧑‍🎓</span><h3>Student division</h3><p>For full-time students of any age. School teams can enter together.</p></div>
+  <div class="card"><span class="ico">🌍</span><h3>Open division</h3><p>Anyone, anywhere. Compete against the world's sharpest solvers.</p></div>
+  <div class="card"><span class="ico">👥</span><h3>Team division</h3><p>Teams of 2–5 from companies, clubs and classrooms. Great for team-building.</p></div>
+</div></section>
+<section id="register"><div class="container"><div class="leadgen">
+  <div><span class="eyebrow">Free registration</span><h2>Enter the next championship</h2><ul class="ticks"><li>Contest reminder by email 24 h before</li><li>Your personal contest link</li><li>Results and solutions after the window closes</li></ul>
+  <h3 class="mt">Rules (summary)</h3><ol class="small muted"><li>One account per person; teams register once.</li><li>Ranking: most correct answers, then fastest total time.</li><li>No AI tools, solvers or outside help during the attempt.</li><li>Prize winners verify identity and eligibility before payout.</li><li>Void where prohibited. Full terms are in the <a href="{{R}}terms.html#contests">Terms</a>.</li></ol></div>
+  <form data-form="Contest registration" data-success="You're registered! Watch your inbox for your contest link.">
+    <div class="row"><div><label for="c-name">Name / team name*</label><input id="c-name" name="name" required></div><div><label for="c-email">Email*</label><input id="c-email" type="email" name="email" required></div></div>
+    <div class="row"><div><label for="c-div">Division*</label><select id="c-div" name="division" required><option>Open</option><option>Student</option><option>Team (2–5)</option></select></div><div><label for="c-country">Country*</label><input id="c-country" name="country" required></div></div>
+    <label for="c-handle">Leaderboard display name</label><input id="c-handle" name="display_name" placeholder="How you'll appear on the board">
+    <label for="c-src">How did you hear about us?</label><select id="c-src" name="source"><option>Search</option><option>YouTube</option><option>Social media</option><option>Friend / colleague</option><option>School / employer</option><option>Other</option></select>
+    <label class="check"><input type="checkbox" name="rules" value="accepted" required> I accept the contest rules.*</label>
+    <button class="btn btn-primary btn-lg mt" type="submit" style="width:100%">Register free →</button>
+  </form>
+</div></div></section>
+<section class="section-alt"><div class="container grid g2">
+  <div class="card"><h3>🏢 Sponsor a contest</h3><p>Put your brand on the championship, reach top problem-solvers and meet potential hires.</p><a class="btn btn-primary" href="{{R}}advertise.html#sponsor">Sponsorship packages</a></div>
+  <div class="card"><h3>🧩 Design a contest puzzle</h3><p>Paid commissions for original, well-tested puzzles. Your name goes on the puzzle.</p><a class="btn btn-ghost" href="{{R}}submit-puzzle.html">Submit a puzzle</a></div>
+</div></section>
+<script>
+(function(){function next(){var n=new Date(),y=n.getUTCFullYear(),m=n.getUTCMonth();for(var k=0;k<3;k++){var d=new Date(Date.UTC(y,m+k,1));while(d.getUTCDay()!==6)d.setUTCDate(d.getUTCDate()+1);if(d.getTime()+2*864e5>n.getTime())return d;}}
+var t=next(),el=document.getElementById("next-contest");el.textContent=t.toLocaleDateString(undefined,{weekday:"long",year:"numeric",month:"long",day:"numeric",timeZone:"UTC"})+" (UTC)";
+function tick(){var s=Math.max(0,Math.floor((t-Date.now())/1000));var v={d:Math.floor(s/86400),h:Math.floor(s%86400/3600),m:Math.floor(s%3600/60),s:s%60};for(var k in v){var e=document.querySelector('[data-cd="'+k+'"]');if(e)e.textContent=v[k];}if(s===0&&el)el.textContent+=" — open now!";}tick();setInterval(tick,1000);})();
+</script>

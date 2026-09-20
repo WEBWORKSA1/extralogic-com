@@ -1,0 +1,47 @@
+<!--{"title":"Support ExtraLogic — Donate to Keep Logic Puzzles Free | ExtraLogic","desc":"Donate to ExtraLogic to fund free daily puzzles, contest prize pools, creator pay and operations. One-time or monthly, with supporter perks.","out":"support.html","nav":"support","priority":"0.8"}-->
+<section class="page-hero"><div class="container"><div class="crumbs"><a href="{{R}}index.html">Home</a> / Support</div>
+<h1>Keep sharp thinking free for everyone</h1><p class="lead">ExtraLogic is funded by ads, sponsors and supporters like you. Your donation pays for new puzzles, prize pools, talented creators and the running costs of the site.</p></div></section>
+<section style="padding-top:32px"><div class="container">
+  <div class="leadgen" data-donate>
+    <div>
+      <h2>Make a donation</h2>
+      <div style="display:flex;gap:18px;margin-bottom:14px"><label class="check"><input type="radio" name="freq" value="one-time" checked> One-time</label><label class="check"><input type="radio" name="freq" value="monthly"> Monthly</label></div>
+      <div class="amounts"><button data-amt="5">$5</button><button data-amt="10">$10</button><button data-amt="25" class="on">$25</button><button data-amt="50">$50</button><button data-amt="100">$100</button></div>
+      <label for="custom">Or enter an amount (USD)</label><input id="custom" name="custom" type="number" min="1" placeholder="e.g. 15">
+      <p><b>You're giving <span data-amt-label>$25</span></b>. Choose how to pay:</p>
+      <div class="grid g2">
+        <button class="btn btn-primary" data-pay="paypal">PayPal</button>
+        <button class="btn btn-dark" data-pay="stripe">Card (Stripe)</button>
+        <button class="btn btn-ghost" data-pay="buyMeACoffee">☕ Buy Me a Coffee</button>
+        <button class="btn btn-ghost" data-pay="patreon">Patreon (monthly)</button>
+      </div>
+      <button class="btn btn-ghost mt" data-pay="githubSponsors" style="width:100%">GitHub Sponsors</button>
+      <p class="form-note">Payments are processed securely by the provider you choose. ExtraLogic never sees your card details.</p>
+    </div>
+    <div>
+      <div class="card" style="box-shadow:none"><h3>Where your money goes</h3><div data-fund></div>
+      <table class="mt"><tr><td>🏆 Contest prize pools</td><td>40%</td></tr><tr><td>🧩 Puzzle creators &amp; writers</td><td>25%</td></tr><tr><td>🎬 Video production</td><td>15%</td></tr><tr><td>📣 Promotion &amp; outreach</td><td>10%</td></tr><tr><td>🖥️ Hosting &amp; operations</td><td>10%</td></tr></table></div>
+    </div>
+  </div>
+</div></section>
+<section class="section-alt"><div class="container">
+  <div class="center"><span class="eyebrow">Supporter tiers</span><h2>Become a monthly supporter</h2></div>
+  <div class="grid g3 mt">
+    <div class="card tier"><h3>Thinker</h3><p class="price">$3<small>/mo</small></p><ul><li>Supporter badge on the leaderboard</li><li>Name in the monthly thank-you list</li><li>Supporter-only Discord channel</li></ul><a class="btn btn-ghost" href="#pledge">Choose Thinker</a></div>
+    <div class="card tier featured"><span class="badge">Best value</span><h3>Strategist</h3><p class="price">$9<small>/mo</small></p><ul><li>Everything in Thinker</li><li>Ad-free ExtraLogic Pro</li><li>Early access to new games</li><li>Vote on the next puzzle types</li></ul><a class="btn btn-primary" href="#pledge">Choose Strategist</a></div>
+    <div class="card tier"><h3>Grandmaster</h3><p class="price">$25<small>/mo</small></p><ul><li>Everything in Strategist</li><li>A puzzle named after you each month</li><li>Credit in videos</li><li>Annual supporter merch</li></ul><a class="btn btn-ghost" href="#pledge">Choose Grandmaster</a></div>
+  </div>
+</div></section>
+<section id="pledge"><div class="container"><div class="leadgen">
+  <div><span class="eyebrow">Pledge, sponsor or give in kind</span><h2>Other ways to support</h2>
+  <ul class="ticks"><li><b>Pledge now</b>: we'll send you a secure payment link</li><li><b>Corporate matching</b> and sponsorships</li><li><b>Donate prizes</b>: books, gadgets, courses, gift cards</li><li><b>Volunteer</b>: translate, test puzzles or moderate</li></ul>
+  <p class="small muted">Prefer to sponsor with a brand placement? See <a href="{{R}}advertise.html">Advertise &amp; Sponsor</a>.</p></div>
+  <form data-form="Donation pledge" data-success="Thank you! We'll email you a secure payment link and a receipt shortly.">
+    <div class="row"><div><label for="p-name">Name*</label><input id="p-name" name="name" required></div><div><label for="p-email">Email*</label><input id="p-email" type="email" name="email" required></div></div>
+    <div class="row"><div><label for="p-type">Support type</label><select id="p-type" name="support_type"><option>Donation</option><option>Monthly supporter tier</option><option>Prize donation (in-kind)</option><option>Corporate sponsorship</option><option>Volunteer</option></select></div>
+    <div><label for="p-amt">Amount</label><input id="p-amt" name="pledge_amount" value="$25 one-time"></div></div>
+    <label for="p-msg">Message (optional)</label><textarea id="p-msg" name="message" placeholder="Dedicate your gift, describe a prize, or say hi"></textarea>
+    <label class="check"><input type="checkbox" name="public_credit" value="yes"> Credit me publicly on the supporters list</label>
+    <button class="btn btn-primary btn-lg mt" type="submit" style="width:100%">Send pledge</button>
+  </form>
+</div></div></section>
