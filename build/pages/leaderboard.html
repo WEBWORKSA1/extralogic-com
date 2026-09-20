@@ -1,0 +1,18 @@
+<!--{"title":"Leaderboard & Hall of Fame | ExtraLogic","desc":"Track your ExtraLogic streak, points and solve history, and see the Hall of Fame for monthly contest champions.","out":"leaderboard.html","nav":"contests","priority":"0.6"}-->
+<section class="page-hero"><div class="container"><div class="crumbs"><a href="{{R}}index.html">Home</a> / Leaderboard</div>
+<h1>Leaderboard &amp; Hall of Fame</h1><p class="lead">Your personal stats are saved in this browser. Contest rankings are published after each championship.</p></div></section>
+<section><div class="container grid g2" style="align-items:start">
+  <div class="card"><h2>Your stats</h2>
+    <div class="grid g3 center"><div><div class="result-big" style="font-size:2.4rem" data-streak>0</div><span class="small muted">day streak</span></div><div><div class="result-big" style="font-size:2.4rem" data-best>0</div><span class="small muted">best streak</span></div><div><div class="result-big" style="font-size:2.4rem" data-points>0</div><span class="small muted">points</span></div></div>
+    <h3 class="mt">Recent solves</h3><div class="table-wrap"><table id="hist"><tr><th>Date</th><th>Game</th><th>Time</th></tr></table></div>
+    <p class="small muted mt">Want your stats synced across devices and on the public board? <a href="{{R}}premium.html">ExtraLogic Pro</a> accounts are coming soon.</p>
+  </div>
+  <div class="card"><h2>🏆 Hall of Fame</h2><p class="muted">Season 1 champions will appear here after the first Monthly Logic Championship.</p>
+  <table><tr><th>Contest</th><th>Open</th><th>Student</th><th>Team</th></tr><tr><td>Season 1 · #1</td><td>—</td><td>—</td><td>—</td></tr></table>
+  <a class="btn btn-primary mt" href="{{R}}contests.html#register">Register to compete</a></div>
+</div></section>
+<script>
+document.addEventListener("DOMContentLoaded",function(){var h=(window.XL&&XL.store.get("history",[]))||[],t=document.getElementById("hist");
+if(!h.length){t.insertAdjacentHTML("beforeend","<tr><td colspan='3' class='muted'>No solves yet — <a href='puzzles.html'>play a puzzle</a>!</td></tr>");return;}
+h.slice(0,15).forEach(function(r){var tr=document.createElement("tr");[r.d,r.g,XL.fmtTime(r.s||0)].forEach(function(v){var td=document.createElement("td");td.textContent=v;tr.appendChild(td);});t.appendChild(tr);});});
+</script>
